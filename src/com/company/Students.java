@@ -1,6 +1,6 @@
 package com.company;
 
-public class Students {
+public class Students{
     private String name;
     private String grupa;
     private String curs;
@@ -8,7 +8,7 @@ public class Students {
     private float notaSemestriala2;
     private float mediaAnuala;
 
-    public Students(String name,String grupa,String curs,  float notaSemestriala1, float notaSemestriala2){
+    public Students(String name, String grupa, String curs, float notaSemestriala1, float notaSemestriala2){
         this.name = name;
         this.grupa = grupa;
         this.curs = curs;
@@ -21,6 +21,15 @@ public class Students {
     public float getNotaSemestriala1() { return notaSemestriala1; }
     public float getNotaSemestriala2() { return notaSemestriala2;}
     public float getMediaAnuala() { return mediaAnuala; }
-    public void mediaAnuala() { mediaAnuala = (notaSemestriala1 + notaSemestriala2)/2; }
+    public void mediaAnuala() { mediaAnuala = (notaSemestriala1 + notaSemestriala2)/2;}
+
+
+
+    @Override
+    public String toString() {
+        return("Name: " + getName() + "\nGrupa: " + getGrupa() + "\nCurs: " + getCurs() + "\nMedia din semestrul I: " +
+                getNotaSemestriala1() + "\nMedia din semestrul II: " + getNotaSemestriala2() + "\nMedia finala: " +
+                getMediaAnuala());
+    }
 }
 
